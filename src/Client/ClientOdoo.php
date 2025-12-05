@@ -2,12 +2,13 @@
 
 namespace Mahmoudrdash\CustomePackegConnectOdoo\Client;
 
-use Exception;
 use Ripcord\Ripcord;
 use Mahmoudrdash\CustomePackegConnectOdoo\Contracts\ClientInterface;
+use Mahmoudrdash\CustomePackegConnectOdoo\Exceptions\ConnectOdooException;
 
 class ClientOdoo implements ClientInterface
 {
+     protected int $user_odoo_id;
     protected $common ;
     protected $object; 
     public function __construct(
@@ -15,7 +16,6 @@ class ClientOdoo implements ClientInterface
         protected string $db,
         protected string $user,
         protected string $pass,
-        protected int $user_odoo_id,
     )
     {
         $this->common = Ripcord::client($this->url."/xmlrpc/2/common");
@@ -28,7 +28,7 @@ class ClientOdoo implements ClientInterface
        $uid = $this->common->authenticate($this->db, $this->user, $this->pass, array());
            
        if (!$uid) {
-           throw new Exception("ODoo authentication failed");
+           throw new ConnectOdooException("ODoo authentication failed");
        }
        return $uid;
     }

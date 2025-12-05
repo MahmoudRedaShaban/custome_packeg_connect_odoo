@@ -19,7 +19,8 @@ class CustomerRepository implements RepositoryInterface
     }
     public function findBy(array $criteria ): ?array
     {
-        return $this->client->search($this->model, $criteria) ?? null; 
+        $ids = $this->client->search($this->model, $criteria);
+        return  $ids ?  $this->client->read($this->model, [$ids[0]])[0] : null; 
     }
     public function find($id): ?array
     {

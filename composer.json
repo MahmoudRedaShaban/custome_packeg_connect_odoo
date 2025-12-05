@@ -1,6 +1,6 @@
 {
     "name": "mahmoudrdash/custome_packeg_connect_odoo",
-    "description": "sempel connec odoo  and get and set data in odoo customer",
+    "description": "Odoo xml - RPC Connector using Ripcord with Repositry pattern and Solid archiecture",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -16,6 +16,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
+        "php":"8.*",
         "ext-xmlrpc":"*",
         "darkaonline/ripcord": "dev-master"    }
 }
