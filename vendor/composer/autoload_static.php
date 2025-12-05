@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInit6c419e0aeb40cac01d86afbb738620f1
 {
     public static $prefixLengthsPsr4 = array (
+        'R' =>
+        array (
+            'Ripcord\\' => 8,
+        ),
         'M' =>
         array (
             'Mahmoudrdash\\CustomePackegConnectOdoo\\' => 38,
@@ -14,6 +18,10 @@ class ComposerStaticInit6c419e0aeb40cac01d86afbb738620f1
     );
 
     public static $prefixDirsPsr4 = array (
+        'Ripcord\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/darkaonline/ripcord/src/Ripcord',
+        ),
         'Mahmoudrdash\\CustomePackegConnectOdoo\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',

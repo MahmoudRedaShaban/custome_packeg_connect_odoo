@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Ripcord\\' => array($vendorDir . '/darkaonline/ripcord/src/Ripcord'),
     'Mahmoudrdash\\CustomePackegConnectOdoo\\' => array($baseDir . '/src'),
 );
