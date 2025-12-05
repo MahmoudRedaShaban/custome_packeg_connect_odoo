@@ -1,0 +1,19 @@
+{
+    "name": "mahmoudrdash/custome_packeg_connect_odoo",
+    "description": "sempel connec odoo  and get and set data in odoo customer",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Mahmoudrdash\\CustomePackegConnectOdoo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MahmoudReda",
+            "email": "mahreda19@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
